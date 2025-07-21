@@ -30,14 +30,6 @@ test.describe('Alert Handling Validations', () => {
         await confirmAlertBox.click();
         expect(await confirmationAlertMsg.textContent()).toBe('You clicked on OK!');
 
-        await page.waitForLoadState();
-
-        page.on('dialog', async(alert) => {
-            await alert.dismiss();
-        });
-        await confirmAlertBox.click();
-        expect(await confirmationAlertMsg.textContent()).toBe('You clicked on Cancel!');
-
     });
 
     test('Confirmation-Dismiss-Alert Test', async({ page }) => {
