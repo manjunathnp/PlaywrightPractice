@@ -14,6 +14,7 @@ test.describe('Alert Handling Validations', () => {
             const alertMsg = alert.message();
             console.log('Alert Message: ', alertMsg);
             expect(alertMsg).toBe('I am an alert box!');
+            
             await alert.accept();
         });
         await alertBoxButton.click();
